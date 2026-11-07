@@ -1,0 +1,22 @@
+[theme]
+primaryColor = "#16899A"
+backgroundColor = "#F7F9FC"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#334155"
+font = "sans serif"
+chartCategoricalColors = ["#16899A", "#C66B3A", "#7C93AA", "#ABC7CF", "#94A3B8"]
+chartSequentialColors = ["#F1F7F8", "#E2F0F1", "#D1E8E9", "#B9DDDF", "#9FD0D3", "#82C1C5", "#62AFB5", "#449DA5", "#2A8B94", "#16899A"]
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = true
+address = "localhost"
+port = 8501
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+showSidebarNavigation = false
