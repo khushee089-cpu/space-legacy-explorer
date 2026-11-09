@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" role="img" aria-label="Illustrative Mars globe">
+<defs>
+ <radialGradient id="mars" cx="36%" cy="30%" r="75%"><stop offset="0" stop-color="#f1b083"/><stop offset=".42" stop-color="#d77c4f"/><stop offset=".78" stop-color="#a64e32"/><stop offset="1" stop-color="#633326"/></radialGradient>
+ <linearGradient id="shade" x2="1"><stop stop-color="#18263a" stop-opacity="0"/><stop offset=".67" stop-color="#18263a" stop-opacity=".08"/><stop offset="1" stop-color="#18263a" stop-opacity=".72"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="20"/></filter>
+ <clipPath id="clip"><circle cx="400" cy="230" r="164"/></clipPath>
+</defs>
+<ellipse cx="405" cy="414" rx="145" ry="17" fill="#17283b" opacity=".12" filter="url(#blur)"/>
+<circle cx="400" cy="230" r="166" fill="url(#mars)"/>
+<g clip-path="url(#clip)" fill="none" stroke="#7d3e30" stroke-opacity=".24">
+ <path d="M215 151c48-38 78-14 111-32s50-27 79-9 51 24 91 9 94 9 138 43"/>
+ <path d="M212 277c48-21 73-8 103 15s73 6 98 24 74 16 104-1 82-6 128 29"/>
+ <path d="M242 351c37-27 75-15 101-4s56 12 87-1 65-16 95-3 60 4 95-15"/>
+</g>
+<g clip-path="url(#clip)" fill="#823e30" opacity=".24">
+ <circle cx="335" cy="176" r="23"/><circle cx="474" cy="273" r="31"/><circle cx="388" cy="324" r="16"/><circle cx="515" cy="176" r="12"/>
+</g>
+<circle cx="400" cy="230" r="166" fill="url(#shade)"/>
+<circle cx="400" cy="230" r="166" fill="none" stroke="#d18a64" stroke-opacity=".36" stroke-width="2"/>
+<text x="400" y="440" text-anchor="middle" fill="#64748b" font-family="Inter,Arial,sans-serif" font-size="16" letter-spacing="3">ILLUSTRATIVE MARS</text>
+</svg>
