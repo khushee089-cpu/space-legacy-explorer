@@ -1,6 +1,52 @@
 import streamlit as st
 import numpy as np
+import plotly.graph_objects as go 
 import plotly.graph_objects as go
+
+def build_mars_rover_figure():
+    fig = go.Figure()
+
+    # Rover body
+    fig.add_trace(go.Scatter3d(
+        x=[-1, 1, 1, -1, -1],
+        y=[-0.5, -0.5, 0.5, 0.5, -0.5],
+        z=[1, 1, 1, 1, 1],
+        mode="lines",
+        line=dict(color="orange", width=8),
+        name="Rover Body"
+    ))
+
+    # Six wheels
+    for x in [-1, 0, 1]:
+        for y in [-0.7, 0.7]:
+            fig.add_trace(go.Scatter3d(
+                x=[x], y=[y], z=[0.35],
+                mode="markers",
+                marker=dict(size=13, color="silver"),
+                showlegend=False
+            ))
+
+    # Camera mast
+    fig.add_trace(go.Scatter3d(
+        x=[0, 0], y=[0, 0], z=[1, 2],
+        mode="lines+markers",
+        line=dict(color="white", width=7),
+        marker=dict(size=8),
+        name="Camera Mast"
+    ))
+
+    fig.update_layout(
+        title="Interactive 3D Mars Rover",
+        scene=dict(
+            xaxis_title="X",
+            yaxis_title="Y",
+            zaxis_title="Height",
+            aspectmode="data"
+        ),
+        height=550
+    )
+
+    return fig
 from modules.navigation import render_sidebar
 from modules.components import load_css, render_footer
 from data.data_loader import load_equipment_data, get_summary_stats
